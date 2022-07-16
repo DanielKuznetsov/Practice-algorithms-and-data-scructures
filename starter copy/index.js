@@ -39,3 +39,31 @@ const fizzBuzz = function (n) {
 };
 
 fizzBuzz(7);
+
+//Second approach
+
+const fizzBuzz2 = function (n) {
+  const answer = [];
+
+  for (let i = 1; i <= n; i++) {
+    let currStr = "";
+
+    if (i % 3 === 0) {
+      currStr += "Fizz";
+    }
+
+    if (i % 4 === 0) {
+      currStr += "Buzz";
+    }
+
+    if (currStr === "") {
+      currStr += `${n}`;
+    }
+
+    answer.push(currStr);
+  }
+
+  console.log(answer);
+};
+
+fizzBuzz2(7);
